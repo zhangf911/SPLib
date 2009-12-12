@@ -3,6 +3,7 @@
 //
 
 #include "splib.h"
+#include <stdio.h>
 #include "OdsWriterImpl.h"
 #include "ZipArchive.h"
 #include "ToUTF8.h"

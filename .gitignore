@@ -1,0 +1,11 @@
+*.o
+*.lo
+*.la
+.libs
+config.log
+config.status
+Makefile
+src/.deps
+src/.dirstamp
+splib.pc
+libtool

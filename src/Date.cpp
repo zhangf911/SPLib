@@ -3,6 +3,7 @@
 //
 
 #include <ctype.h>
+#include <stdio.h>
 #include "splib.h"
 #include "splibint.h"
 

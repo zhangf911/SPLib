@@ -5,6 +5,8 @@
 #include <assert.h>
 #include <math.h>
 #include <sstream>
+#include <stdio.h>
+#include <string.h>
 
 // these lines define the verify() macro that is equivalent to assert() in
 // debug configurations but also works in release configurations; this is

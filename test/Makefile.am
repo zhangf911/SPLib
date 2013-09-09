@@ -1,4 +1,0 @@
-bin_PROGRAMS = test
-test_SOURCES = test.cpp
-LDADD = $(DEPS_LIBS)
-AM_CPPFLAGS = $(DEPS_CFLAGS)

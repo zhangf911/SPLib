@@ -16,6 +16,13 @@
 #define _tfopen   fopen
 #endif
 
+// platform-specific includes and declarations
+#ifdef WIN32
+    #include <tchar.h>
+// #else
+//    typedef char _TCHAR;
+#endif // WIN32
+
 #if defined(_DEBUG) && defined(WIN32)
 #include <crtdbg.h>
 #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)

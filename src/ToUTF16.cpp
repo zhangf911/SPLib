@@ -7,9 +7,10 @@
 # include <windows.h>
 #else
 # include <iconv.h>
-# ifndef ICONV_CONST
-#   define ICONV_CONST const
-# endif
+// TODO use cmake to tell me if the second parameter must be const or not
+// # ifndef ICONV_CONST
+// #   define ICONV_CONST const
+// # endif
 # include <errno.h>
 # include "ByteArray.h"
 #endif
@@ -37,7 +38,7 @@ ToUTF16::ToUTF16(const _TCHAR* s) {
 #else // !WIN32
     // use iconv for current locale to UTF16 conversion
     iconv_t cd = ::iconv_open("UTF-16LE", "");
-    ICONV_CONST char* inbuf = (ICONV_CONST char*)s;
+    char* inbuf = (char*)s;
     size_t inbytesleft = ::strlen(s);
     const int outbufsize = 64;
     char outbufstg[outbufsize];

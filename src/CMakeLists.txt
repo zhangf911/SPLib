@@ -1,4 +1,8 @@
-add_library(spreadsheet splib.h 
+IF( WIN32 )
+	SET( CMAKE_CXX_FLAGS "-D NDEBUG -D WIN32 -D _WINDOWS -D _USRDLL -D SPLIB_EXPORTS")
+ENDIF( WIN32 )
+
+add_library(spreadsheet SHARED splib.h 
 BasicExcel.cpp BasicExcel.h 
 ByteArray.cpp ByteArray.h 
 CellImpl.cpp CellImpl.h 
@@ -34,3 +38,5 @@ XlsxWriter.cpp
 XlsxWriterImpl.cpp XlsxWriterImpl.h 
 zip.cpp zip.h 
 ZipArchive.cpp ZipArchive.h)
+
+target_link_libraries(spreadsheet zlib libiconv.dll)

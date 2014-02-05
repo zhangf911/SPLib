@@ -11,3 +11,8 @@ test/test
 *.xls
 *.xlsx
 *.lib
+*.dll*
+*.ilk
+*.pdb
+*.exe*
+*.exp

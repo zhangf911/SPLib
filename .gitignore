@@ -16,3 +16,4 @@ test/test
 *.pdb
 *.exe*
 *.exp
+*.dylib

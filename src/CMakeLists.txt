@@ -39,4 +39,5 @@ XlsxWriterImpl.cpp XlsxWriterImpl.h
 zip.cpp zip.h 
 ZipArchive.cpp ZipArchive.h)
 
-target_link_libraries(spreadsheet zlib libiconv.dll)
+# target_link_libraries(spreadsheet zlib libiconv.dll)
+target_link_libraries(spreadsheet z c)
